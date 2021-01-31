@@ -16,9 +16,5 @@ return function (App $app) {
     });
 
     $app->get('/', HomeController::class.':index');
-
-    $app->group('/users', function (Group $group) {
-        $group->get('', ListUsersAction::class);
-        $group->get('/{id}', ViewUserAction::class);
-    });
+    $app->post('/count', HomeController::class.':count');
 };

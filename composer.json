@@ -22,6 +22,7 @@
         "php-di/php-di": "^6.1",
         "slim/psr7": "^1.1",
         "slim/twig-view": "*",
+        "alfreddagenais/php-word-count-utf8": "*",
         "slim/slim": "^4.5"
     },
     "require-dev": {

@@ -4,8 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "47d9cd3bc8cd19e6bb78e8b956edf16b",
+    "content-hash": "4a7c741d404c4309551f260ea7bc6e4a",
     "packages": [
+        {
+            "name": "alfreddagenais/php-word-count-utf8",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alfreddagenais/php-word-count-utf8.git",
+                "reference": "4455bac28aad4377bdee192b642c4de13d5c36f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alfreddagenais/php-word-count-utf8/zipball/4455bac28aad4377bdee192b642c4de13d5c36f9",
+                "reference": "4455bac28aad4377bdee192b642c4de13d5c36f9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU GPLv3"
+            ],
+            "authors": [
+                {
+                    "name": "Alfred Dagenais",
+                    "email": "jesuis@alfreddagenais.com"
+                }
+            ],
+            "description": "PHP implementation of Word-Count for UTF-8 text",
+            "time": "2020-07-11T19:51:34+00:00"
+        },
         {
             "name": "fig/http-message-util",
             "version": "1.1.5",
