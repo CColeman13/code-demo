@@ -1,24 +1,18 @@
 {
-    "name": "slim/slim-skeleton",
-    "description": "A Slim Framework skeleton application for rapid development",
+    "name": "ccoleman13/code-demo",
+    "description": "Demo Code",
     "keywords": [
-        "microframework",
+        "demo code",
         "rest",
         "router",
         "psr7"
     ],
-    "homepage": "http://github.com/slimphp/Slim-Skeleton",
+    "homepage": "http://github.com/ccoleman13/code-demo",
     "license": "MIT",
     "authors": [
         {
-            "name": "Josh Lockhart",
-            "email": "info@joshlockhart.com",
-            "homepage": "http://www.joshlockhart.com/"
-        },
-        {
-            "name": "Pierre Berube",
-            "email": "pierre@lgse.com",
-            "homepage": "http://www.lgse.com/"
+            "name": "Chris Coleman",
+            "email": "chrisc@vmunix.com"
         }
     ],
     "require": {
@@ -27,6 +21,7 @@
         "php": "^7.2",
         "php-di/php-di": "^6.1",
         "slim/psr7": "^1.1",
+        "slim/twig-view": "*",
         "slim/slim": "^4.5"
     },
     "require-dev": {
@@ -45,9 +40,5 @@
         "psr-4": {
             "Tests\\": "tests/"
         }
-    },
-    "scripts": {
-        "start": "php -S localhost:8080 -t public",
-        "test": "phpunit"
     }
 }

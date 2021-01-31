@@ -25,6 +25,7 @@ class HttpErrorHandler extends SlimErrorHandler
     protected function respond(): Response
     {
         $exception = $this->exception;
+        $backtrace = $this->exception->getTraceAsString();
         $statusCode = 500;
         $error = new ActionError(
             ActionError::SERVER_ERROR,
@@ -62,8 +63,8 @@ class HttpErrorHandler extends SlimErrorHandler
         $encodedPayload = json_encode($payload, JSON_PRETTY_PRINT);
 
         $response = $this->responseFactory->createResponse($statusCode);
-        $response->getBody()->write($encodedPayload);
+        $response->getBody()->write('<pre>'.$exception->getMessage().'<br>'.$backtrace.'</pre>');
 
-        return $response->withHeader('Content-Type', 'application/json');
+        return $response->withHeader('Content-Type', 'text/html');
     }
 }

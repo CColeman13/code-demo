@@ -7,6 +7,8 @@ use App\Application\ResponseEmitter\ResponseEmitter;
 use DI\ContainerBuilder;
 use Slim\Factory\AppFactory;
 use Slim\Factory\ServerRequestCreatorFactory;
+use Slim\Views\Twig;
+use Slim\Views\TwigMiddleware;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -62,6 +64,16 @@ register_shutdown_function($shutdownHandler);
 
 // Add Routing Middleware
 $app->addRoutingMiddleware();
+
+//Twig
+$container->set('view', function() {
+	$twig = Twig::create(__DIR__.'/../templates',['debug' => true]);
+	$twig->addExtension(new \Twig\Extension\DebugExtension);
+	return $twig;
+});
+
+// Add Twig Middleware
+$app->add(TwigMiddleware::createFromContainer($app)); 
 
 // Add Error Middleware
 $errorMiddleware = $app->addErrorMiddleware($displayErrorDetails, false, false);
