@@ -17,4 +17,5 @@ return function (App $app) {
 
     $app->get('/', HomeController::class.':index');
     $app->post('/count', HomeController::class.':count');
+    $app->get('/count', HomeController::class.':index');
 };
