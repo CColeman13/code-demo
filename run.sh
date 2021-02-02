@@ -28,6 +28,6 @@ fi
 # build and start the container
 if [ -d "code-demo" ]; then
     cd code-demo &&
-        $DOCKER build . &&
+        $DOCKER compose build &&
         $DOCKER compose up
 fi
