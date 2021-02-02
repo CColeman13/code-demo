@@ -27,7 +27,9 @@ fi
 
 # build and start the container
 if [ -d "code-demo" ]; then
-    cd code-demo &&
-        $DOCKER compose build &&
+    cd code-demo && \
+        $GIT fetch && \
+        $GIT pull && \
+        $DOCKER compose build && \
         $DOCKER compose up
 fi
